@@ -18,14 +18,20 @@ Usage
                         "bookAuthor":"Shubham"
                     }
                 }
+2. Run the post request. 
+3. Check the changes in the database: http://localhost:8081/h2
+4. Type jdbc:h2:mem:testdb  into JDBC URL
+5. Type org.h2.Driver into Driver Class
+6. Then connect
 
 ## Prerequisites
-* Need to install metamask browser extension and create an account.
-* Once account is ready, you need to add some ether balance using Rinkeby Authenticated Faucet.
-* Node - v10.x.x (preferrably v10.15.0 for long term support)
-* npm - v6.x.x (preferrably v6.6.0)
+* Java 11
+* Lombok
+* Gradle
+* kafka
+* spring boot
 
-## Tools used:
+## Run zookeeper
 1. kafka: 
    * Solidity: Ethereum's smart contract programming language.
    * Remix: IDE, used for smart contract development.
