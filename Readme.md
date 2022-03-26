@@ -31,14 +31,12 @@ Usage
 * kafka
 * spring boot
 
-## Run zookeeper
-1. kafka: 
-   * Solidity: Ethereum's smart contract programming language.
-   * Remix: IDE, used for smart contract development.
-   * Metamask: MetaMask is a software cryptocurrency wallet used to interact with the Ethereum blockchain
-1. Frontend: 
-   * Web3.js: Javascript library used to interact with the Ethereum blockchain
-   * React.js: Javascript library for frontend development.
-## To Run
-* *num run server*
-* Go to browser at address http://localhost:3000 to access the web page.
+## Installation & running
+1. Create 3 kafka brokers
+   * first copy poste the server.properties file. There should be 3 server files naming server.properties,server-1.properties and server-2.properties
+   * Add these two properties in server.properties file
+     ** broker.id=1
+     ** listeners=PLAINTEXT://localhost:9093
+     ** log.dirs=/tmp/kafka-logs-1
+     ** auto.create.topics.enable=false
+  
