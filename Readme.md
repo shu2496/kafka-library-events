@@ -1,7 +1,7 @@
 ## Kafka Spring Boot producer consumer application using H2 in-memory database
 **Two applications, one for library-event-producer and another for library-event-consumer.**
 
-##Details
+## Details
 1. there are 3 broker 
   * on ports 9092, 9093, 9094
 2. library-event-Consumer port: 8081
@@ -35,8 +35,11 @@ Usage
 ### Create 3 kafka brokers
    
    #### Add/change these properties in server.properties file
-     1. broker.id=1
+     1. broker.id=0
      2. listeners=PLAINTEXT://localhost:9092
-     3. log.dirs=/tmp/kafka-logs-1
+     3. log.dirs=/tmp/kafka-logs
      4. auto.create.topics.enable=false
-  #### first copy poste the server.properties file. There should be 3 server files naming server.properties,server-1.properties and server-2.properties
+  ### copy poste the server.properties file. There should be 3 server files naming server.properties,server-1.properties and server-2.properties
+  1. change broker id to 1 and 2 respectively
+  2. change localhost to 9093 and 9094 
+  3. change the log to 1 or 2 (log.dirs=/tmp/kafka-logs-1) (log.dirs=/tmp/kafka-logs-2)
