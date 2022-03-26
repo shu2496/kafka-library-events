@@ -1,0 +1,34 @@
+POST WITH-NULL-LIBRARY-EVENT-ID
+---------------------
+Content-Type: application/json
+
+URL: http://localhost:8080/v1/libraryevent
+
+Data:
+{
+    "libraryEventId":null,
+    "book":
+    {
+        "bookId":101,
+        "bookName":"MyKafka",
+        "bookAuthor":"Shubham"
+    }
+}
+
+POST WITH-ID
+---------------------
+Content-Type: application/json
+
+URL: http://localhost:8080/v1/libraryevent
+
+Data:
+{
+    "libraryEventId":1,
+    "book":
+    {
+        "bookId":102,
+        "bookName":"MyKafka2.0",
+        "bookAuthor":"Shubham"
+    }
+}
+
