@@ -1,30 +1,5 @@
 ## Kafka Spring Boot producer consumer application using H2 in-memory database
-**Two applications, one for library-event-producer and another for library-event-consumer.**
-
-## Details
-1. there are 3 broker 
-  * on ports 9092, 9093, 9094
-2. library-event-Consumer port: 8081
-
-
-## Usage
-### To make POST request on the
-* url: http://localhost:8080/v1/libraryevent
-* Content-Type: application/json
-* data: {
-                    "libraryEventId":null,
-                    "book":
-                    {
-                        "bookId":101,
-                        "bookName":"MyKafka",
-                        "bookAuthor":"Shubham"
-                    }
-         }
-2. Run the post request. 
-3. Check the changes in the database: http://localhost:8081/h2
-4. Type jdbc:h2:mem:testdb  into JDBC URL
-5. Type org.h2.Driver into Driver Class
-6. Then connect
+** Two applications, one for library-event-producer and another for library-event-consumer. **
 
 ## Prerequisites
 * Java 11
@@ -32,6 +7,11 @@
 * Gradle
 * kafka
 * spring boot
+
+## Details
+1. There are 3 brokers
+  * on ports 9092, 9093, 9094
+2. library-event-Consumer port: 8081
 
 ## Installation & running
 ### Create 3 kafka brokers
@@ -57,6 +37,30 @@
 * C:\kafka_2.13-3.1.0>kafka-server-start.bat config\server-2.properties
 #### Connect with consumer without key
 * C:\kafka_2.13-3.1.0>kafka-console-consumer --bootstrap-server localhost:9092 --topic library-events
+
+
+## Usage
+### To make POST request on the
+* url: http://localhost:8080/v1/libraryevent
+* Content-Type: application/json
+* data: {
+                    "libraryEventId":null,
+                    "book":
+                    {
+                        "bookId":101,
+                        "bookName":"MyKafka",
+                        "bookAuthor":"Shubham"
+                    }
+         }
+2. Run the post request. 
+3. Check the changes in the database: http://localhost:8081/h2
+4. Type jdbc:h2:mem:testdb  into JDBC URL
+5. Type org.h2.Driver into Driver Class
+6. Then connect
+
+
+
+
 
 ### Other kafka commands
 #### To create a topic
