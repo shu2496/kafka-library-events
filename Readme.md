@@ -32,11 +32,11 @@ Usage
 * spring boot
 
 ## Installation & running
-1. Create 3 kafka brokers
-   * first copy poste the server.properties file. There should be 3 server files naming server.properties,server-1.properties and server-2.properties
-   * Add these two properties in server.properties file
-     ** broker.id=1
-     ** listeners=PLAINTEXT://localhost:9093
-     ** log.dirs=/tmp/kafka-logs-1
-     ** auto.create.topics.enable=false
-  
+### Create 3 kafka brokers
+   
+   #### Add/change these properties in server.properties file
+     1. broker.id=1
+     2. listeners=PLAINTEXT://localhost:9092
+     3. log.dirs=/tmp/kafka-logs-1
+     4. auto.create.topics.enable=false
+  #### first copy poste the server.properties file. There should be 3 server files naming server.properties,server-1.properties and server-2.properties
