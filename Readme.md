@@ -1,5 +1,5 @@
 ## Kafka Spring Boot producer consumer application using H2 in-memory database
-** Two applications, one for library-event-producer and another for library-event-consumer. **
+* Two applications, one for library-event-producer and another for library-event-consumer. *
 
 ## Prerequisites
 * Java 11
