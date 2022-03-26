@@ -43,3 +43,18 @@ Usage
   1. change broker id to 1 and 2 respectively
   2. change localhost to 9093 and 9094 
   3. change the log to 1 or 2 (log.dirs=/tmp/kafka-logs-1) (log.dirs=/tmp/kafka-logs-2)
+
+### Start zookeeper and kafka server
+#### zookeeper
+1. C:\kafka_2.13-3.1.0>zookeeper-server-start.bat config\zookeeper.properties
+#### kafka server
+1. C:\kafka_2.13-3.1.0>kafka-server-start.bat config\server.properties
+#### kafka server-1
+1. C:\kafka_2.13-3.1.0>kafka-server-start.bat config\server-1.properties
+#### kafka server-2
+1. C:\kafka_2.13-3.1.0>kafka-server-start.bat config\server-2.properties
+#### Connect with consumer without key
+1. C:\kafka_2.13-3.1.0>kafka-console-consumer --bootstrap-server localhost:9092 --topic library-events
+
+
+
