@@ -7,9 +7,11 @@
 2. library-event-Consumer port: 8081
 
 
-Usage
-1. To make POST request
-                {
+## Usage
+### To make POST request on the
+* url: http://localhost:8080/v1/libraryevent
+* Content-Type: application/json
+* data: {
                     "libraryEventId":null,
                     "book":
                     {
@@ -17,7 +19,7 @@ Usage
                         "bookName":"MyKafka",
                         "bookAuthor":"Shubham"
                     }
-                }
+         }
 2. Run the post request. 
 3. Check the changes in the database: http://localhost:8081/h2
 4. Type jdbc:h2:mem:testdb  into JDBC URL
@@ -46,15 +48,25 @@ Usage
 
 ### Start zookeeper and kafka server
 #### zookeeper
-1. C:\kafka_2.13-3.1.0>zookeeper-server-start.bat config\zookeeper.properties
+* C:\kafka_2.13-3.1.0>zookeeper-server-start.bat config\zookeeper.properties
 #### kafka server
-1. C:\kafka_2.13-3.1.0>kafka-server-start.bat config\server.properties
+* C:\kafka_2.13-3.1.0>kafka-server-start.bat config\server.properties
 #### kafka server-1
-1. C:\kafka_2.13-3.1.0>kafka-server-start.bat config\server-1.properties
+* C:\kafka_2.13-3.1.0>kafka-server-start.bat config\server-1.properties
 #### kafka server-2
-1. C:\kafka_2.13-3.1.0>kafka-server-start.bat config\server-2.properties
+* C:\kafka_2.13-3.1.0>kafka-server-start.bat config\server-2.properties
 #### Connect with consumer without key
-1. C:\kafka_2.13-3.1.0>kafka-console-consumer --bootstrap-server localhost:9092 --topic library-events
+* C:\kafka_2.13-3.1.0>kafka-console-consumer --bootstrap-server localhost:9092 --topic library-events
+
+### Other kafka commands
+#### To create a topic
+* C:\kafka_2.13-3.1.0>kafka-topics.bat --bootstrap-server localhost:9092 --topic first_topic --create --partitions 4 --replication-factor 1
+#### To list all the topics
+* C:\kafka_2.13-3.1.0\bin\windows>kafka-topics --bootstrap-server localhost:9092 --list
+#### Details of the topic
+* C:\kafka_2.13-3.1.0>kafka-topics --bootstrap-server localhost:9092 --topic first_topic --describe
+#### Delete a topic
+* C:\kafka_2.13-3.1.0>kafka-topics --bootstrap-server localhost:9092 --topic first_topic --delete
 
 
 
