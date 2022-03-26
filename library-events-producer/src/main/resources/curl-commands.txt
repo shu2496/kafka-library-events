@@ -3,12 +3,13 @@ POST WITH-NULL-LIBRARY-EVENT-ID
 
 {
     "libraryEventId":null,
-    "book":{
+    "book":
+    {
         "bookId":101,
         "bookName":"MyKafka",
         "bookAuthor":"Shubham"
-        }
     }
+}
 
 
 curl -i \
