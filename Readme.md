@@ -53,7 +53,7 @@
                     }
          }
 2. Run the post request. 
-3. Check the changes in the database: http://localhost:8081/h2
+3. Check the changes in the database: http://localhost:8081/h2-console/login
 4. Type jdbc:h2:mem:testdb  into JDBC URL
 5. Type org.h2.Driver into Driver Class
 6. Then connect
